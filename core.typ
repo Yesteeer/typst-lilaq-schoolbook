@@ -198,31 +198,33 @@
 /// 
 /// *Example:*
 ///
-/// ```example
+/// #example(`
+/// #import "@preview/lilaq:0.6.0" as lq
 /// #show: lilaq-schoolbook
 ///
 /// #diagram(
-///   start: (0, -3.2),
-///   end: (6, 3.2),
+///   start: (0, -2.2),
+///   end: (14, 2.2),
 ///   add-to-xaxis: (
 ///     tick-distance: 1/ 2,
 ///     locate-ticks: lq.tick-locate.linear.with(unit: calc.pi),
 ///     format-ticks: lq.tick-format.fraction.with(suffix: $pi$),
 ///   ),
 ///   plot(
-///      x => 3*calc.sin(x), 
+///      x => 2*calc.sin(x), 
 ///      start: -1, 
-///      end: 7, 
-///      label: $3sin(x)$,
+///      end: 15, 
+///      label: $2sin(x)$,
 ///   ),
 ///   plot(
-///      x => calc.cos(3*x), 
+///      x => calc.sin(3*x), 
 ///      start: -1, 
-///      end: 7, 
-///      label: $cos(3x)$,
+///      end: 15, 
+///      label: $sin(3x)$,
+///      num: 200,
 ///   ),
-/// )
-/// ```
+/// )`, dir: ttb)
+/// 
 ///
 /// -> content
 #let lilaq-schoolbook(
